@@ -1,3 +1,6 @@
 export const home = (req,res)=>{
-    return res.send("<h1>Server Running</h1>")
+    return res.render('serverRunning',{
+        title : "Contacts Directory",
+        port : process.env.PORT
+    })
 }
