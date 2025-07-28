@@ -6,9 +6,8 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 8000
 
-app.get("/",(req,res)=>{
-    return res.send("<h1>Server Running</h1>")
-})
+import routes from "./routes/index.js"
+app.get("/",routes)
 
 app.listen(PORT,(err)=>{
     if(err){
