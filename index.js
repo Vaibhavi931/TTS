@@ -1,10 +1,14 @@
 import express from "express";
 import dotenv from "dotenv";
+import chalk from "chalk";
 
 dotenv.config()
 
 const app = express()
 const PORT = process.env.PORT || 8000
+
+//Setting up Mongoose Database
+import db from './config/mongoose.js'
 
 //Setting up Views
 import expressLayouts from "express-ejs-layouts";
@@ -24,5 +28,5 @@ app.listen(PORT,(err)=>{
         console.log("ERROR OCCURRED",err);
         return 
     }
-    console.log("SERVER STARTED AT PORT ",PORT);
+    console.log(chalk.blue("SERVER STARTED AT PORT ",PORT));
 })

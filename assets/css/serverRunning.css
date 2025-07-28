@@ -3,10 +3,11 @@ body {
   font-size: 2rem;
   text-align: center;
   margin-top: 20%;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
 }
 #status {
   font-weight: bold;
+  color: aliceblue;
 }
 .dot {
   display: inline-block;
@@ -37,6 +38,7 @@ body {
 #port{
   font-size: 14px;
   font-style: oblique;
+  color: aliceblue;
 }
 .port{
   width: 100px;
